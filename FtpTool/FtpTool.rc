@@ -1,0 +1,315 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\FtpTool.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\FtpTool.ico"
+IDI_ICON_FOLDER         ICON                    "res\\FOLDER.ICO"
+IDI_ICON_FILE           ICON                    "res\\FILE.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About FtpTool"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "FtpTool Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011 Foxconn ATP",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,32,50,16,WS_GROUP
+END
+
+IDD_FTPTOOL_DIALOG DIALOGEX 0, 0, 466, 311
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "FtpTool"
+MENU IDR_MENU_OPTION
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Exit",IDCANCEL,409,265,50,16
+    CONTROL         "",IDC_LIST_CONTENT,"SysListView32",LVS_REPORT | LVS_AUTOARRANGE | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,16,19,435,174
+    PUSHBUTTON      "Connect",IDC_BUTTON_CONNECT,409,226,50,16
+    CONTROL         "",IDC_RICHEDIT2_MESSAGE,"RichEdit20A",ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_BORDER | WS_VSCROLL | WS_TABSTOP,14,217,328,64
+    GROUPBOX        "Message",IDC_STATIC,7,204,342,81
+    GROUPBOX        "FTP",IDC_STATIC_FTPCONTENT,7,7,452,192
+    LTEXT           "Status",IDC_STATIC_STATUS,7,296,175,8
+    LTEXT           "process and speed",IDC_STATIC_PROCESS,190,296,158,8
+END
+
+IDD_OPTION_DIALOG DIALOGEX 0, 0, 209, 223
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Config"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FTPADDR,88,21,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FTPPORT,88,35,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FTPUSER,88,49,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FTPPASS,88,63,85,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "Passive Mode",IDC_CHECK_PASSIVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,39,81,66,10
+    CONTROL         "Record Daily Log",IDC_CHECK_RECORD_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,81,82,10
+    COMBOBOX        IDC_COMBO_PROXYTYPE,89,122,86,71,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PROXYADDR,89,137,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXYPORT,89,151,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXYUSER,89,165,85,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PROXYPASS,89,179,85,12,ES_PASSWORD | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,144,202,50,14
+    GROUPBOX        "FTP Config",IDC_STATIC_FTP,17,7,177,91
+    LTEXT           "Address:",IDC_STATIC_FTPADDR,40,27,30,8
+    LTEXT           "Port:",IDC_STATIC_FTPPORT,40,40,17,8
+    LTEXT           "User:",IDC_STATIC_FTPUSER,40,53,18,8
+    LTEXT           "Password:",IDC_STATIC_FTPPASS,40,66,34,8
+    GROUPBOX        "Proxy Config",IDC_STATIC_PROXY,17,109,177,89
+    LTEXT           "Type:",IDC_STATIC_PROXYTYPE,40,125,20,8
+    LTEXT           "Port:",IDC_STATIC_PROXYPORT,40,153,17,8
+    LTEXT           "Address:",IDC_STATIC_PROXYADDR,40,139,30,8
+    LTEXT           "User:",IDC_STATIC_PROXYUSER,40,167,18,8
+    LTEXT           "Password:",IDC_STATIC_PROXYPASS,40,181,34,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Edwin.YY.Yang"
+            VALUE "FileDescription", "FTP Client Tool"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "FtpTool.exe"
+            VALUE "LegalCopyright", "Copyright (C) 2011 Foxconn ATP"
+            VALUE "OriginalFilename", "FtpTool.exe"
+            VALUE "ProductName", "FtpTool"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_FTPTOOL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 459
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+    END
+
+    IDD_OPTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_OPTION_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_PROXYTYPE, 0x403, 9, 0
+0x5448, 0x5054, 0x475f, 0x7465, "\000" 
+    IDC_COMBO_PROXYTYPE, 0x403, 13, 0
+0x5448, 0x5054, 0x435f, 0x6e6f, 0x656e, 0x7463, "\000" 
+    IDC_COMBO_PROXYTYPE, 0x403, 7, 0
+0x6f53, 0x6b63, 0x3573, "\000" 
+    IDC_COMBO_PROXYTYPE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_OPTION MENU 
+BEGIN
+    POPUP "&Option"
+    BEGIN
+        MENUITEM "&Config",                     ID_OPTION_CONFIG
+        MENUITEM SEPARATOR
+        POPUP "&Log"
+        BEGIN
+            MENUITEM "&Today",                      ID_LOG_TODAY
+            MENUITEM "&More",                       ID_LOG_MORE
+        END
+        POPUP "&Skin"
+        BEGIN
+            MENUITEM "AquaOS",                      ID_SKIN_AQUAOS
+            MENUITEM "MAC",                         ID_SKIN_MAC
+            MENUITEM "Royale",                      ID_SKIN_ROYALE
+            MENUITEM "XP Corona",                   ID_SKIN_XPCORONA
+            MENUITEM "XP Metallic",                 ID_SKIN_XPMETALLIC
+            MENUITEM SEPARATOR
+            MENUITEM "Other",                       ID_SKIN_OTHER
+            MENUITEM "None",                        ID_SKIN_NONE
+            MENUITEM SEPARATOR
+            MENUITEM "Get More ...",                ID_SKIN_GETMORE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&About",                      ID_OPTION_ABOUT
+    END
+END
+
+IDR_MENU_OPERATION MENU 
+BEGIN
+    POPUP "&Operation"
+    BEGIN
+        MENUITEM "&Download File",              ID_OPERATION_DOWNLOAD
+        MENUITEM "&Unload Here",                ID_OPERATION_UPLOAD
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Folder",                ID_OPERATION_OPEN
+        MENUITEM "&New Folder",                 ID_OPERATION_NEWFOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "D&elete",                     ID_OPERATION_DELETE
+        MENUITEM "Refre&sh",                    ID_OPERATION_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "Up One &Level",               ID_OPERATION_UPONELEVEL
+        MENUITEM "To Root Directory",           ID_OPERATION_TOROOTDIRECTORY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About FtpTool..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\FtpTool.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
